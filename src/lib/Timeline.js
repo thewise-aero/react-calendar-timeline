@@ -538,7 +538,7 @@ export default class ReactCalendarTimeline extends Component {
   }
 
   handleWheelZoom = (speed, xPosition, deltaY) => {
-    this.changeZoom(1.0 + speed * deltaY / 500, xPosition / this.state.width)
+    this.changeZoom((speed === 10 ? 1.5 : 1.0) + speed * deltaY / 500, xPosition / this.state.width)
   }
 
   changeZoom = (scale, offset = 0.5) => {
