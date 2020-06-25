@@ -39,6 +39,12 @@ export const defaultHeaderFormats = {
     medium: 'w',
     short: 'w'
   },
+  isoWeek: {
+    long: 'MM/DD',
+    mediumLong: 'MM/DD',
+    medium: 'MM/DD',
+    short: 'DD'
+  },
   day: {
     long: 'dddd, LL',
     mediumLong: 'dddd, LL',
