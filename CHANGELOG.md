@@ -7,6 +7,8 @@ and this project adheres (more or less) to [Semantic Versioning](http://semver.o
 
 ## Unreleased
 
+* Add `className` prop to Timeline component to override `react-calendar-timeline` class #682
+
 ### Fixes and Improvements
 
 - create local stack context for z-index @ilaiwi
@@ -44,6 +46,10 @@ if you render a stateful component via `itemRenderer` then the state will be los
 
 - You need to do `e.stopPropagation()` for all callbacks passed to `itemRenderer`
 
+## 0.26.7
+
+* fix scrolling with trackpad @ilaiwi #679
+* remove duplicate proptype validation in `TimelineStateContext` @xat
 
 ## 0.26.6
 

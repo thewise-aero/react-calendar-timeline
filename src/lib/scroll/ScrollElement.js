@@ -22,6 +22,9 @@ class ScrollElement extends Component {
     }
   }
 
+  /**
+   * needed to handle scrolling with trackpad
+   */
   handleScroll = () => {
     const scrollX = this.scrollComponent.scrollLeft
     this.props.onScroll(scrollX)

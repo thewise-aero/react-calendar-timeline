@@ -81,6 +81,7 @@ export default class ReactCalendarTimeline extends Component {
     itemRenderer: PropTypes.func,
     groupRenderer: PropTypes.func,
 
+    className: PropTypes.string,
     style: PropTypes.object,
 
     keys: PropTypes.shape({
@@ -211,6 +212,7 @@ export default class ReactCalendarTimeline extends Component {
     itemTouchSendsClick: false,
 
     style: {},
+    className: '',
     keys: defaultKeys,
     timeSteps: defaultTimeSteps,
     headerRef: () => {},
@@ -544,7 +546,7 @@ export default class ReactCalendarTimeline extends Component {
   }
 
   handleWheelZoom = (speed, xPosition, deltaY) => {
-    this.changeZoom(1.0 + speed * deltaY / 500, xPosition / this.state.width)
+    this.changeZoom((speed === 10 ? 1.5 : 1.0) + speed * deltaY / 500, xPosition / this.state.width)
   }
 
   changeZoom = (scale, offset = 0.5) => {
