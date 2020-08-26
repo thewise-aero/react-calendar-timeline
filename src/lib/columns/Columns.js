@@ -62,7 +62,7 @@ export class Columns extends Component {
         const classNames =
           'rct-vl' +
           (firstOfType ? ' rct-vl-first' : '') +
-          (minUnit === 'month' || minUnit === 'day' || minUnit === 'hour' || minUnit === 'minute'
+          (minUnit === 'day' || minUnit === 'hour' || minUnit === 'minute'
             ? ` rct-day-${time.day()} `
             : '') +
           classNamesForTime.join(' ')
